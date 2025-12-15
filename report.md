@@ -26,7 +26,7 @@ I replaced the original 3D experience with:
 - Responsive layout
 
 ## AI Tool Usage
-I used AI tools (ChatGPT) for:
+I used AI tools (ChatGPT & Gemini) for:
 - Brainstorming animation ideas
 - Debugging GSAP timelines
 - Structuring components
