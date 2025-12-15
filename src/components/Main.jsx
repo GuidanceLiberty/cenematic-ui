@@ -9,7 +9,6 @@ import Sprite from "./Sprite";
 import Inspiration from "./Inspiration";
 import Origin from "./Origin";
 
-import VideoBg from "@/assets/img/hero/video1.webm";
 import Logo from "@/assets/img/logo/logo-theme.png";
 import { Menu, X } from "lucide-react";
 import FullPageNavOverlay from "./FullPageNavOverlay";
@@ -61,7 +60,7 @@ const Main = () => {
       {/* Video background */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
-        src={VideoBg}
+        src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
         autoPlay
         loop
         muted

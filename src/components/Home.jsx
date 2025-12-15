@@ -1,5 +1,4 @@
 import React from "react";
-import VideoBg from "@/assets/img/hero/video.mp4";
 import Logo from "@/assets/img/logo/logo-theme.png";
 import { Button } from "./ui/button";
 import { useNavigate } from "react-router-dom"; 
@@ -21,7 +20,7 @@ const Home = () => {
       {/* Video background */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
-        src={VideoBg}
+        src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
         autoPlay
         loop
         muted

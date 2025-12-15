@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import VideoBg from "@/assets/img/hero/video1.webm";
+
 import Logo from "@/assets/img/logo/logo-theme.png";
 import { Menu, X, PlayCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -18,7 +18,7 @@ const testimonialData = [
     name: "FAVOUR GOLD",
     title: "ANIMATION",
     cardImage: CardImage1,
-    videoUrl: "/sprite.mp4",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
     // ADDED SM/MOBILE/MD CLASSES
     cardClassesSm: "w-32 h-64 relative md:w-36 md:h-72",
     // UPDATED LG/DESKTOP CLASSES
@@ -32,10 +32,9 @@ const testimonialData = [
     name: "CONFIDENCE OJUA",
     title: "MASS-COMMUNICATION",
     cardImage: CardImage2,
-    videoUrl: "/sprite.mp4",
-    // ADDED SM/MOBILE/MD CLASSES
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+  
     cardClassesSm: "w-32 h-64 relative md:w-36 md:h-72",
-    // UPDATED LG/DESKTOP CLASSES
     cardClassesLg:
       "lg:w-64 lg:h-[400px] lg:absolute lg:bottom-[15%] lg:left-1/2 lg:-translate-x-1/2",
 
@@ -46,7 +45,7 @@ const testimonialData = [
     name: "CHIEF AMOS",
     title: "BUSINESS AGRIC",
     cardImage: CardImage3,
-    videoUrl: "/sprite.mp4",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
     // ADDED SM/MOBILE/MD CLASSES
     cardClassesSm: "w-32 h-64 relative md:w-36 md:h-72",
     // UPDATED LG/DESKTOP CLASSES

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import VideoBg from "@/assets/img/hero/video1.webm";
 import { ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
 import Logo from "@/assets/img/logo/logo-theme.png";
 import { useNavigate } from "react-router-dom";
@@ -58,7 +57,7 @@ const Hero = () => {
     <section className="fixed inset-0 z-50 h-full w-full flex justify-center items-center" id="hero">
       <video
         className="absolute inset-0 w-full h-full object-cover"
-        src={VideoBg}
+        src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
         autoPlay
         loop
         muted

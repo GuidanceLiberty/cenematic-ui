@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
-import VideoBg from "@/assets/img/hero/video1.webm";
 import { AspectRatio } from "./ui/aspect-ratio";
 import Logo from "@/assets/img/logo/logo-theme.png";
 import { useNavigate } from "react-router-dom";
@@ -31,7 +30,7 @@ const Begin = () => {
       {/* Video background */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
-        src={VideoBg}
+        src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
         autoPlay
         loop
         muted

@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import VideoBg from "@/assets/img/hero/video1.webm";
 import Logo from "@/assets/img/logo/logo-theme.png";
 import { Menu, X, PlayCircle, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -23,7 +22,7 @@ const spriteCardData = [
     clip: "polygon(0% 5%, 100% 0%, 100% 95%, 0% 100%)",
     isInteractive: false,
   },
-  // 2. Middle Left Card 
+  // 2. Middle Left Card
   {
     name: "JOAN MARIE",
     title: "PREV",
@@ -35,17 +34,18 @@ const spriteCardData = [
   },
   // 3. CENTER CARD (Interactive Video)
   {
-    name: "THE NEXT LIMIT",
-    title: "SPRITE ZERO SUGAR",
-    cardImage: CardImageMain,
-    videoUrl: "/sprite.mp4",
-    // Taller and wider, centered position, slightly bent
-    cardClasses:
-      "bottom-[0%] left-1/2 -translate-x-1/2 w-[30rem] max-w-[80vw] h-[550px] rotate-[0deg] z-20",
-    // Custom clip path for the slightly bent/trapezoid look
-    clip: "polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%)",
-    isInteractive: true,
-  },
+  name: "THE NEXT LIMIT",
+  title: "SPRITE ZERO SUGAR",
+  cardImage: CardImageMain,
+  videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+  // Taller and wider, centered position, slightly bent
+  cardClasses:
+    "bottom-[0%] left-1/2 -translate-x-1/2 w-[30rem] max-w-[80vw] h-[550px] rotate-[0deg] z-20",
+  // Custom clip path for the slightly bent/trapezoid look
+  clip: "polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%)",
+  isInteractive: true,
+},
+
   // 4. Middle Right Card (Non-interactive placeholder)
   {
     name: "HANNAH BEAUCHLER",
@@ -76,7 +76,7 @@ const greenGlowStyle = {
 
 // Style for the 'WATCH' button glow (Reverting to solid-button style)
 const buttonGlowStyle = {
-  boxShadow: "0 0 15px rgba(74, 222, 128, 0.9)", 
+  boxShadow: "0 0 15px rgba(74, 222, 128, 0.9)",
 };
 
 // MAIN COMPONENT ---
@@ -85,14 +85,13 @@ const Sprite = () => {
   const [showFullMenu, setShowFullMenu] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-
   const [currentVideo, setCurrentVideo] = useState(null);
 
   const handleMenuToggle = () => {
     setShowFullMenu(!showFullMenu);
   };
 
-  // Video Modal Handler 
+  // Video Modal Handler
   const handleWatchClick = (data) => {
     setCurrentVideo(data.videoUrl);
     setIsModalOpen(true);
@@ -112,12 +111,16 @@ const Sprite = () => {
       {/* Video background */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
-        src={VideoBg}
         autoPlay
         loop
         muted
         playsInline
-      />
+      >
+        <source
+          src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+          type="video/mp4"
+        />
+      </video>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/80" />
@@ -198,7 +201,7 @@ const Sprite = () => {
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
-                
+
                 clipPath: data.clip,
               }}
             >
@@ -212,7 +215,6 @@ const Sprite = () => {
               {/* CONTENT OVERLAY (Names on side cards, Button removed from here) */}
               <div className="absolute inset-0 flex flex-col justify-end items-center p-4">
                 {!data.isInteractive && (
-                  
                   <div className="text-center w-full bg-black/50 py-2">
                     <p className="text-white text-xl font-bold uppercase tracking-widest leading-none">
                       {data.name}
@@ -297,7 +299,6 @@ const Sprite = () => {
               className="relative w-[90%] max-w-7xl bg-black border border-green-500/50 rounded-lg p-3 md:p-6 shadow-2xl z-50"
               onClick={(e) => e.stopPropagation()}
             >
-              
               <div className="mb-4 text-center">
                 <h3 className="text-white text-3xl font-bold uppercase tracking-widest leading-none">
                   {mainCardData.title}
@@ -317,7 +318,6 @@ const Sprite = () => {
                   src={currentVideo}
                   autoPlay
                   controls
-                  
                   className="absolute top-0 left-0 w-full h-full rounded"
                 />
               </div>

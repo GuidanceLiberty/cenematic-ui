@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, Fragment } from "react";
-import VideoBg from "@/assets/img/hero/video1.webm";
 import Logo from "@/assets/img/logo/logo-theme.png";
 import { Menu, X, PlayCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -17,7 +16,7 @@ const testimonialData = [
     name: "GUIDANCE OGAR",
     title: "FULLSTACK DEVELOPER",
     cardImage: CardImage1,
-    videoUrl: "/sprite.mp4",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
 
     cardClassesSm: "w-32 h-64 relative md:w-36 md:h-72",
 
@@ -31,7 +30,7 @@ const testimonialData = [
     name: "LIBERTY OJUA",
     title: "NURSING MID-WIFE",
     cardImage: CardImage2,
-    videoUrl: "/sprite.mp4",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
 
     cardClassesSm: "w-32 h-64 relative md:w-36 md:h-72",
 
@@ -45,7 +44,7 @@ const testimonialData = [
     name: "FEGA MICHAEL",
     title: "SPORT ATHLETE",
     cardImage: CardImage3,
-    videoUrl: "/sprite.mp4",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
 
     cardClassesSm: "w-32 h-64 relative md:w-36 md:h-72",
 
@@ -99,7 +98,7 @@ const Origin = () => {
       {/* Video background */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
-        src={VideoBg}
+        src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
         autoPlay
         loop
         muted
