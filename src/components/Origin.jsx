@@ -17,7 +17,7 @@ const testimonialData = [
     name: "GUIDANCE OGAR",
     title: "FULLSTACK DEVELOPER",
     cardImage: CardImage1,
-    videoUrl: "/ogar.mp4",
+    videoUrl: "/sprite.mp4",
 
     cardClassesSm: "w-32 h-64 relative md:w-36 md:h-72",
 
@@ -31,7 +31,7 @@ const testimonialData = [
     name: "LIBERTY OJUA",
     title: "NURSING MID-WIFE",
     cardImage: CardImage2,
-    videoUrl: "/health.mp4",
+    videoUrl: "/sprite.mp4",
 
     cardClassesSm: "w-32 h-64 relative md:w-36 md:h-72",
 
@@ -45,7 +45,7 @@ const testimonialData = [
     name: "FEGA MICHAEL",
     title: "SPORT ATHLETE",
     cardImage: CardImage3,
-    videoUrl: "/sport.mp4",
+    videoUrl: "/sprite.mp4",
 
     cardClassesSm: "w-32 h-64 relative md:w-36 md:h-72",
 

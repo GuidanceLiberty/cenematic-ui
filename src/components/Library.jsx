@@ -18,7 +18,7 @@ const testimonialData = [
     name: "FAVOUR GOLD",
     title: "ANIMATION",
     cardImage: CardImage1,
-    videoUrl: "/health.mp4",
+    videoUrl: "/sprite.mp4",
     // ADDED SM/MOBILE/MD CLASSES
     cardClassesSm: "w-32 h-64 relative md:w-36 md:h-72",
     // UPDATED LG/DESKTOP CLASSES
@@ -46,7 +46,7 @@ const testimonialData = [
     name: "CHIEF AMOS",
     title: "BUSINESS AGRIC",
     cardImage: CardImage3,
-    videoUrl: "/sport.mp4",
+    videoUrl: "/sprite.mp4",
     // ADDED SM/MOBILE/MD CLASSES
     cardClassesSm: "w-32 h-64 relative md:w-36 md:h-72",
     // UPDATED LG/DESKTOP CLASSES
