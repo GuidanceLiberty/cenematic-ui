@@ -11,7 +11,7 @@ import CardImage1 from "@/assets/img/hero/team-8.jpg";
 import CardImage2 from "@/assets/img/hero/team9.jpeg";
 import CardImage3 from "@/assets/img/hero/team-10.jpeg";
 
-// TESTIMONIAL DATA (UPDATED WITH RESPONSIVE CLASSES)
+// TESTIMONIAL DATA 
 const testimonialData = [
   {
     name: "FAVOUR GOLD",
@@ -46,9 +46,8 @@ const testimonialData = [
     title: "BUSINESS AGRIC",
     cardImage: CardImage3,
     videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-    // ADDED SM/MOBILE/MD CLASSES
+  
     cardClassesSm: "w-32 h-64 relative md:w-36 md:h-72",
-    // UPDATED LG/DESKTOP CLASSES
     cardClassesLg:
       "lg:w-64 lg:h-[400px] lg:absolute lg:bottom-[18%] lg:right-[20%]",
 
