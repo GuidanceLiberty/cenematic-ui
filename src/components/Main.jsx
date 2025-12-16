@@ -32,27 +32,59 @@ const Main = () => {
 
   const handleMenuToggle = () => setShowFullMenu(!showFullMenu);
 
-  // Full-page scroll handler
+  // Desktop wheel scroll handler
   const handleWheel = (e) => {
     e.preventDefault();
     if (scrolling) return;
 
     setScrolling(true);
     if (e.deltaY > 0) {
-      // scroll down
       setCurrentIndex((prev) => (prev + 1 < sections.length ? prev + 1 : 0));
     } else {
-      // scroll up
       setCurrentIndex((prev) => (prev - 1 >= 0 ? prev - 1 : sections.length - 1));
     }
 
-    setTimeout(() => setScrolling(false), 1000); 
+    setTimeout(() => setScrolling(false), 1000);
   };
 
+  // Mobile touch scroll support
   useEffect(() => {
     const container = containerRef.current;
+    let touchStartY = 0;
+
+    const handleTouchStart = (e) => {
+      touchStartY = e.touches[0].clientY;
+    };
+
+    const handleTouchMove = (e) => {
+      if (scrolling) return;
+      const touchEndY = e.touches[0].clientY;
+      const deltaY = touchStartY - touchEndY;
+
+      if (Math.abs(deltaY) < 30) return;
+
+      setScrolling(true);
+      if (deltaY > 0) {
+        // swipe up -> scroll down
+        setCurrentIndex((prev) => (prev + 1 < sections.length ? prev + 1 : 0));
+      } else {
+        // swipe down -> scroll up
+        setCurrentIndex((prev) => (prev - 1 >= 0 ? prev - 1 : sections.length - 1));
+      }
+
+      setTimeout(() => setScrolling(false), 1000);
+      touchStartY = touchEndY;
+    };
+
     container.addEventListener("wheel", handleWheel, { passive: false });
-    return () => container.removeEventListener("wheel", handleWheel);
+    container.addEventListener("touchstart", handleTouchStart, { passive: true });
+    container.addEventListener("touchmove", handleTouchMove, { passive: false });
+
+    return () => {
+      container.removeEventListener("wheel", handleWheel);
+      container.removeEventListener("touchstart", handleTouchStart);
+      container.removeEventListener("touchmove", handleTouchMove);
+    };
   }, [scrolling]);
 
   return (
@@ -112,9 +144,9 @@ const Main = () => {
           index === currentIndex ? (
             <motion.div
               key={section.id}
-              initial={{ opacity: 0, rotate: 5 }}    
-              animate={{ opacity: 1, rotate: 0 }}   
-              exit={{ opacity: 0, rotate: -5 }}     
+              initial={{ opacity: 0, rotate: 5 }}
+              animate={{ opacity: 1, rotate: 0 }}
+              exit={{ opacity: 0, rotate: -5 }}
               transition={{ duration: 1, ease: "easeInOut" }}
               className="absolute inset-0 w-full h-full flex justify-center items-center"
             >
