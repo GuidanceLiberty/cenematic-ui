@@ -1,7 +1,7 @@
 # Immersive Cinematic UI – Front-End Trial Task
 
 ## Live Demo
-🔗 https://cenematic-jacdo5kp6-news-projects-b34bbf20.vercel.app
+🔗 https://cenematic-ui-news-projects-b34bbf20.vercel.app/
 
 ## Repository
 🔗 https://github.com/GuidanceLiberty/cenematic-ui.git
