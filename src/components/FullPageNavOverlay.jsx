@@ -56,7 +56,7 @@ const FullPageNavOverlay = ({ isOpen, onClose }) => {
     { title: "Inspiration Garden", path: "/inspiry" },
     { title: "The Library", path: "/library" },
     { title: "Find Your Gift", path: "/gift" },
-    { title: "Welcome", path: "/index" },
+    { title: "Welcome", path: "/main" },
     { title: "Origin Stories", path: "/origin" },
     { title: "Sprite Zero Sugar", path: "/sprite" },
   ];
